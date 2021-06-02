@@ -84,7 +84,10 @@ export const SingInStyles = makeStyles((theme) => ({
         marginTop: 20,
     },
     loginSideField: {
-        marginBottom: 18,
+        marginBottom: theme.spacing(3),
+    },
+    registerField: {
+        marginBottom: theme.spacing(3),
     },
 }));
 
@@ -172,14 +175,9 @@ function SighIn() {
                         title="Войти в аккаунт"
                     >
                         <FormControl component="fieldset" fullWidth>
-                            <FormGroup
-                                style={{ margin: 20 }}
-                                aria-label="position"
-                                row
-                            >
+                            <FormGroup aria-label="position" row>
                                 <TextField
                                     className={classes.loginSideField}
-                                    autoFocus
                                     id="email"
                                     label="E-Mail"
                                     InputLabelProps={{
@@ -191,7 +189,6 @@ function SighIn() {
                                 />
                                 <TextField
                                     className={classes.loginSideField}
-                                    autoFocus
                                     id="password"
                                     label="Пароль"
                                     InputLabelProps={{
@@ -202,7 +199,6 @@ function SighIn() {
                                     fullWidth
                                 />
                                 <Button
-                                    style={{ marginBottom: 5 }}
                                     variant="contained"
                                     color="primary"
                                     fullWidth
@@ -217,17 +213,23 @@ function SighIn() {
                     <ModalBlock
                         visible={visibleModal === "signUp"}
                         onClose={handleCloseModal}
-                        title="Регистрация"
+                        title="Создайте учетную запись"
                     >
                         <FormControl component="fieldset" fullWidth>
-                            <FormGroup
-                                style={{ margin: 20 }}
-                                aria-label="position"
-                                row
-                            >
+                            <FormGroup aria-label="position" row>
                                 <TextField
-                                    className={classes.loginSideField}
-                                    autoFocus
+                                    className={classes.registerField}
+                                    id="name"
+                                    label="Имя"
+                                    InputLabelProps={{
+                                        shrink: true,
+                                    }}
+                                    variant="filled"
+                                    type="name"
+                                    fullWidth
+                                />
+                                <TextField
+                                    className={classes.registerField}
                                     id="email"
                                     label="E-Mail"
                                     InputLabelProps={{
@@ -238,8 +240,7 @@ function SighIn() {
                                     fullWidth
                                 />
                                 <TextField
-                                    className={classes.loginSideField}
-                                    autoFocus
+                                    className={classes.registerField}
                                     id="password"
                                     label="Пароль"
                                     InputLabelProps={{
@@ -250,12 +251,11 @@ function SighIn() {
                                     fullWidth
                                 />
                                 <Button
-                                    style={{ marginBottom: 5 }}
                                     variant="contained"
                                     color="primary"
                                     fullWidth
                                 >
-                                    Войти
+                                    Далее
                                 </Button>
                             </FormGroup>
                         </FormControl>

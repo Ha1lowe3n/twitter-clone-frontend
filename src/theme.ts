@@ -49,9 +49,6 @@ export const theme = createMuiTheme({
             outlinedPrimary: {
                 borderColor: "rgb(29, 161, 243)",
             },
-            containedPrimary: {
-                backgroundColor: "rgb(29, 161, 243)",
-            },
         },
         MuiFilledInput: {
             underline: {
@@ -79,7 +76,7 @@ export const theme = createMuiTheme({
         },
         MuiDialogTitle: {
             root: {
-                borderBottom: "1px solid rgb(204, 222, 104)",
+                borderBottom: "1px solid rgb(204, 214, 221)",
                 marginBottom: 10,
                 padding: "10px 15px",
                 "& h2": {
@@ -90,6 +87,17 @@ export const theme = createMuiTheme({
                 "& button": {
                     padding: 8,
                     marginRight: 20,
+                },
+            },
+        },
+        MuiFormControl: {
+            root: {
+                maxWidth: 500,
+                boxSizing: "border-box",
+                margin: "10px 15px",
+                "& button": {
+                    margin: "10px 15px",
+                    marginBottom: 10,
                 },
             },
         },
